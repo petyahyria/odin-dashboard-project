@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #eff6ff;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "side header header" "side projects announcements" "side prjects trending";
+    gap: 15px;
+}
+
+.sidebar{
+    background-color: #3b82f6;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #eff6ff;
+    padding: 15px;
+    grid-area: side;
+}
+
+.logo{
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo > img {
+    height: 3rem;
+}
+
+.icon{
+    height: 2rem;
+}
+
+.header{
+    grid-area: header;
+}
+
+.avatar{
+    height: 3rem;
+}
+
+.projects-section{
+    grid-area: projects;
+}
+
+.announcements{
+    grid-area: announcements;
+}
+
+.trending{
+    grid-area: trending;
+}
+

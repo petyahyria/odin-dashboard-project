@@ -17,7 +17,6 @@ html{
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: "side header header" "side projects announcements" "side prjects trending";
-    gap: 15px;
 }
 
 .sidebar{
@@ -25,7 +24,7 @@ html{
     font-size: 2rem;
     font-weight: 600;
     color: #eff6ff;
-    padding: 30px;
+    padding: 15px 30px;
     grid-area: side;
     display: grid;
     grid-template-rows: 1fr 3fr 5fr;
@@ -59,18 +58,94 @@ html{
     gap: 15px;
 }
 
+
+/* fix weird position of comunities icon */
+.comunities > img{
+    position: relative;
+    top: 0.4rem;
+}
+
 .icon{
     height: 2rem;
 }
 
-
+.avatar{
+    height: 4rem;
+}
 
 .header{
     grid-area: header;
+    background-color: #f8fafc;
+    padding: 15px 30px;
+    display: grid;
+    grid-auto-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "search profile-info" "welcome nav";
+    gap: 20px;
+    box-shadow: 0 3px 5px #d1d5db;
 }
 
-.avatar{
-    height: 3rem;
+.search{
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search > input{
+    width: 90%;
+    height: 2.5rem;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #d1d5db;
+}
+
+.profile-info{
+    grid-area: profile-info;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.profile-info > span{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.welcome{
+    grid-area: welcome;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome > img{
+    height: 6rem;
+}
+
+.welcome-text > span {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav > button{
+    display: block;
+    width: 25%;
+    height: 4rem;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #3b82f6;
+    color: #eff6ff;
+    font-weight: 600;
 }
 
 .projects-section{

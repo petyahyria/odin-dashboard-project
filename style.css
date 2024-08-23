@@ -14,9 +14,9 @@ html{
     height: 100vh;
     background-color: #eff6ff;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas: "side header header" "side projects announcements" "side prjects trending";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "side header" "side main";
 }
 
 .sidebar{
@@ -148,8 +148,18 @@ html{
     font-weight: 600;
 }
 
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "projects-section announcements" "projects-section trending";
+    gap: 15px;
+    padding: 20px;
+}
+
 .projects-section{
-    grid-area: projects;
+    grid-area: projects-section;
 }
 
 .announcements{

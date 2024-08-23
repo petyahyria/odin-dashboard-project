@@ -10,8 +10,6 @@ html{
 }
 
 .wrapper{
-    width: 100vw;
-    height: 100vh;
     background-color: #eff6ff;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -151,22 +149,91 @@ html{
 .main{
     grid-area: main;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "projects-section announcements" "projects-section trending";
     gap: 15px;
-    padding: 20px;
+    padding: 50px 20px;
 }
 
 .projects-section{
     grid-area: projects-section;
 }
 
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 25px;
+    height: 100%;
+    padding: 15px 0 35px 0;
+}
+
+.container{
+    border-left: 5px solid #f97316;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f8fafc;
+}
+
+.container > h2{
+    font-size: 1.6rem;
+}
+
+.container > p {
+    font-size: 1.5rem;
+}
+
+.container > div {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    justify-content: end;
+    align-items: center;
+}
+
 .announcements{
     grid-area: announcements;
+    
+}
+
+.announcements-container{
+    background-color: #f8fafc;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.announcement > h2{
+    font-size: 1.6rem;
+}
+
+.announcement > p {
+    font-size: 1.5rem;
 }
 
 .trending{
     grid-area: trending;
+}
+
+.trending-projects{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    background-color: #f8fafc;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.trend-project{
+    display: flex;
+    gap: 15px;
 }
 
